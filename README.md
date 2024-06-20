@@ -1,8 +1,8 @@
 # api_dataanalytics_dataload
 
-##This code repository handles data processing and provides an API.
+## This code repository handles data processing and provides an API.
 
-###What it does:
+### What it does:
 
 Loads data: It can load data from JSON files into a PostgreSQL database.
 Prepares an API: It uses the FastAPI framework to create an API that can be used to access the data.
