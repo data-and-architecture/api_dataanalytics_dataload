@@ -20,3 +20,6 @@ PostgreSQL: Stores the loaded data.
 Load data from JSON to database: Processes JSON files and loads the data into the database.
 Prepare API using FastAPI: Creates a web API for accessing the data.
 Data acquisition from API: Fetches data from external APIs.
+
+
+![Uploading Untitled drawing.png…]()
