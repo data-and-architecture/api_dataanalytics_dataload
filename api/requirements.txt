@@ -1,0 +1,9 @@
+fastapi
+pydantic
+sqlmodel
+sqlalchemy
+psycopg2-binary
+asyncpg
+python-dotenv
+pydantic-settings
+starlette
