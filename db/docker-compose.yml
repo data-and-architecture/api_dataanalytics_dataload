@@ -1,0 +1,37 @@
+version: "3.8"  
+
+networks:
+  api-network:  # Define a network for both services to communicate
+
+volumes:
+  pg-data:  # Persistent volume for postgress data
+
+services:
+  pg-database:
+    image: postgres:13  # Use the official PostgreSQL image (version 13)
+    environment:
+      POSTGRES_USER: rv  # Set the PostgreSQL username
+      POSTGRES_PASSWORD: rv  # Set the PostgreSQL password
+      POSTGRES_DB: fastapi  # Set the name of the PostgreSQL database
+    volumes:
+      - pg-data:/var/lib/postgresql/data  # Persistent volume for PostgreSQL data
+    ports:
+      - "5432:5432"  # Map the container port 5432 to host port 5432
+    networks:
+      - api-network  # Connect to the pg-network
+
+  pgadmin:
+    image: dpage/pgadmin4  # Use the official pgAdmin4 image
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # Set the pgAdmin4 default email
+      PGADMIN_DEFAULT_PASSWORD: rv  # Set the pgAdmin4 default password
+    ports:
+      - "8081:80"  # Map the container port 80 to host port 8081
+    networks:
+      - api-network  # Connect to the pg-network
+
+
+
+
+
+
